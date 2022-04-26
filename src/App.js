@@ -3,7 +3,7 @@ import ContactList from './components/pure/ContactList';
 
 function App() {
   return (
-    <div>
+    <div style={ {backgroundColor: '#22242e', color: '#ffff'} } >
       <div className='container'>
         <ContactList/>
       </div>

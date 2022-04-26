@@ -50,19 +50,21 @@ const ContactList = () => {
             <table className='table table-dark'>
                 <thead>
                         <tr className='text-center'>
-                            <th scope="col">#</th>
                             <th scope="col">First</th>
                             <th scope="col">Last</th>
-                            <th scope="col">Phone Number</th>
+                            <th scope="col">PhoneNumber</th>
+                            <th scope="col">Actions</th>
                         </tr>
                 </thead>
                 <tbody>
                     { users.map((user, index) => 
                         (<tr className='text-center' key={index} onClick={() => obtainUserDetails(user.id)}>
-                            <th scope="row">{ user.id }</th>
                             <td><span>{ user.firstName }</span></td>
                             <td><span>{ user.lastName }</span></td>
                             <td><span>{ user.phone }</span></td>
+                            <td className='text-center'>
+                                <i className='bi-trash cursor-pointer' style={ {color: '#f37878', fontSize: '1.2rem'} }></i>
+                            </td>
                         </tr>
                     )
                 ) 
